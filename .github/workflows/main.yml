@@ -8,7 +8,7 @@ jobs:
       - name: add msbuild to path
         uses: microsoft/setup-msbuild@v1.1
       - name: build dll
-        run: msbuild ClientMod3Emulator.sln /p:Configuration=Release /p:Platform=x86
+        run: msbuild CMemul1.sln /p:Configuration=Release /p:Platform=x86
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
