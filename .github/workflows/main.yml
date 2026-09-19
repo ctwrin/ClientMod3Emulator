@@ -4,13 +4,13 @@ jobs:
   build:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: add msbuild to path
         uses: microsoft/setup-msbuild@v1.1
       - name: build dll
         run: msbuild ClientMod3Emulator.sln /p:Configuration=Release /p:Platform=x86
       - name: upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: emulator_dll
           path: Release/*.dll
